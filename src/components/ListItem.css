@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1,p {
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+.chevronContainer  {
+    display: flex;
+}
+.chevron {
+    height: 7px;
+    width: 10px;
+    margin-top: 24px;
+}
+.articles {
+    width: 400px;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    transition: 0.2s;
+  }
+  h3 {
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    transition: 0.2s;
+  }
+  h3:hover {
+    color: hsl(14, 88%, 65%);
+  }
+  p:hover {
+      color: hsl(237, 50%, 56%);
+  }
+  h1 {
+    font-family: 'Lexend Deca', sans-serif;
+  }
+.parent {
+    position: relative;
+}
+.box.show {
+    position: relative;
+    animation-name: contentDisplay;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+.shake {
+    animation-name: tilt-shaking;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes contentDisplay {
+    0% { transform: translateY(0); opacity: 0.2;}
+    25% { transform: translateY(4px);  opacity: 0.4;}
+    50% { transform: translateY(-4px); opacity: 0.6;}
+    75% { transform: translateY(4px); opacity: 0.8;}
+    100% { transform: translateY(0); opacity: 1;}
+}
+@keyframes tilt-shaking {
+    0% { transform: translateX(0); opacity: 0.2;}
+    25% { transform: translateX(4px);  opacity: 0.4;}
+    50% { transform: translateX(-4px); opacity: 0.6;}
+    75% { transform: translateX(4px); opacity: 0.8;}
+    100% { transform: translateX(0); opacity: 1;}
+  }
